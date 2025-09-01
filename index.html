@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Demo News Website</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+.animate-marquee {
+  display: inline-block;
+  animation: marquee 15s linear infinite;
+}
+</style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+<!-- Header -->
+<header class="bg-red-700 text-white sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
+    <h1 class="text-3xl font-bold cursor-pointer mb-2 md:mb-0">Demo News</h1>
+    <nav class="flex flex-wrap justify-center md:justify-end space-x-2 md:space-x-4">
+      <a href="#" class="hover:underline px-2 py-1">সর্বশেষ</a>
+      <a href="#" class="hover:underline px-2 py-1">বাংলাদেশ</a>
+      <a href="#" class="hover:underline px-2 py-1">আন্তর্জাতিক</a>
+      <a href="#" class="hover:underline px-2 py-1">খেলা</a>
+      <a href="#" class="hover:underline px-2 py-1">বিনোদন</a>
+    </nav>
+  </div>
+
+  <!-- Breaking News Banner -->
+  <div class="bg-yellow-400 text-black py-2 px-4 overflow-hidden">
+    <div class="whitespace-nowrap animate-marquee text-sm md:text-base">
+      🔴 সর্বশেষ খবর: দেশে নতুন করোনা প্রটোকল, শিক্ষাপ্রতিষ্ঠান খোলা-বন্ধের ঘোষণা। বাজেটের খসড়া প্রকাশ। খেলার বিশ্বকাপ প্রস্তুতি।
+    </div>
+  </div>
+</header>
+
+<!-- Main Content -->
+<main class="max-w-7xl mx-auto px-4 mt-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+  <!-- Left Column -->
+  <section class="lg:col-span-2 space-y-6">
+
+    <!-- News 1 -->
+    <article class="bg-white shadow rounded-lg overflow-hidden">
+      <img src="https://picsum.photos/800/400?1" class="w-full h-64 md:h-80 object-cover" alt="সর্বশেষ খবর">
+      <div class="p-4">
+        <h2 class="text-2xl font-bold mb-2">সর্বশেষ খবর</h2>
+        <p class="text-gray-700 text-sm md:text-base">
+          দেশে নতুন করোনা প্রটোকল ঘোষণা করা হয়েছে। শিক্ষাপ্রতিষ্ঠান খোলা-বন্ধের নতুন সিদ্ধান্ত। জনগণকে স্বাস্থ্যবিধি মেনে চলার নির্দেশ দেওয়া হয়েছে। স্থানীয় প্রশাসন সতর্কতা অবলম্বন করছে।
+        </p>
+      </div>
+    </article>
+
+    <!-- News 2 -->
+    <article class="bg-white shadow rounded-lg overflow-hidden">
+      <img src="https://picsum.photos/800/400?2" class="w-full h-64 md:h-80 object-cover" alt="বাংলাদেশ খবর">
+      <div class="p-4">
+        <h2 class="text-2xl font-bold mb-2">বাংলাদেশ</h2>
+        <p class="text-gray-700 text-sm md:text-base">
+          বাংলাদেশে নতুন অর্থনীতি রিপোর্ট প্রকাশিত হয়েছে। শিল্প ও বাণিজ্য ক্ষেত্রে ইতিবাচক বৃদ্ধি লক্ষ্য করা গেছে। সরকারের নতুন নীতি এবং উদ্যোগের বিশ্লেষণ করা হয়েছে। স্থানীয় ব্যবসায়ীরা নতুন পরিকল্পনা গ্রহণ করছেন।
+        </p>
+      </div>
+    </article>
+
+    <!-- News 3 -->
+    <article class="bg-white shadow rounded-lg overflow-hidden">
+      <img src="https://picsum.photos/800/400?3" class="w-full h-64 md:h-80 object-cover" alt="আন্তর্জাতিক খবর">
+      <div class="p-4">
+        <h2 class="text-2xl font-bold mb-2">আন্তর্জাতিক</h2>
+        <p class="text-gray-700 text-sm md:text-base">
+          আন্তর্জাতিক সম্মেলনে নতুন চুক্তি স্বাক্ষর করা হয়েছে। দেশগুলো ব্যবসা ও কূটনীতিতে সহযোগিতা বৃদ্ধি করছে। বৈশ্বিক পরিস্থিতি বিশ্লেষণ করা হয়েছে। আন্তর্জাতিক মিডিয়া বিশ্লেষণ প্রকাশ করেছে।
+        </p>
+      </div>
+    </article>
+
+  </section>
+
+  <!-- Sidebar -->
+  <aside class="space-y-6">
+
+    <!-- Popular News -->
+    <div class="bg-white shadow rounded-lg p-4">
+      <h2 class="text-xl font-bold mb-3 border-b pb-2">সর্বাধিক পঠিত</h2>
+      <ul class="space-y-2 text-sm md:text-base">
+        <li class="border-b pb-2 hover:text-red-700 cursor-pointer">জনপ্রিয় খবর ১</li>
+        <li class="border-b pb-2 hover:text-red-700 cursor-pointer">জনপ্রিয় খবর ২</li>
+      </ul>
+    </div>
+
+    <!-- Trending News -->
+    <div class="bg-white shadow rounded-lg p-4">
+      <h2 class="text-xl font-bold mb-3 border-b pb-2">ট্রেন্ডিং নিউজ</h2>
+      <ul class="space-y-2 text-sm md:text-base">
+        <li class="border-b pb-2 hover:text-red-700 cursor-pointer">ট্রেন্ডিং খবর ১</li>
+        <li class="border-b pb-2 hover:text-red-700 cursor-pointer">ট্রেন্ডিং খবর ২</li>
+      </ul>
+    </div>
+
+    <!-- Advertisement -->
+    <div class="bg-white shadow rounded-lg p-4">
+      <h2 class="text-xl font-bold mb-3 border-b pb-2">বিজ্ঞাপন</h2>
+      <img src="https://picsum.photos/300/250?random=1" alt="Ad" class="w-full rounded">
+    </div>
+
+  </aside>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-gray-300 mt-10">
+  <div class="max-w-7xl mx-auto px-4 py-6 text-center text-sm md:text-base">
+    <p>&copy; 2025 Demo News Website</p>
+  </div>
+</footer>
+
+</body>
+</html>
